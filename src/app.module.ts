@@ -1,6 +1,10 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { RolesModule } from './roles/roles.module';
+import { CursosModule } from './cursos/cursos.module';
+import { UsuariosModule } from './usuarios/usuarios.module';
+import { MateriasModule } from './materias/materias.module';
 
 @Module({
   imports: [
@@ -16,9 +20,13 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         password: config.get('DB_PASS'),
         database: config.get('DB_NAME'),
         autoLoadEntities: true,
-        synchronize: false, // false porque ya tenés las tablas creadas
+        synchronize: false,
       }),
     }),
+    RolesModule,
+    CursosModule,
+    UsuariosModule,
+    MateriasModule,
   ],
 })
 export class AppModule {}
