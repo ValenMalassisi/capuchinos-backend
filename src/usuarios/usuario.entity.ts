@@ -1,6 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
 import { Rol } from '../roles/rol.entity';
 import { Curso } from '../cursos/curso.entity';
+import { Exclude } from 'class-transformer';
 
 @Entity('usuarios')
 export class Usuario {
@@ -22,6 +23,7 @@ export class Usuario {
   @Column({ type: 'varchar', nullable: true })
   telefono: string | null;
 
+  @Exclude()
   @Column()
   password_hash: string;
 

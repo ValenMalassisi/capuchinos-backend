@@ -5,6 +5,12 @@ import { RolesModule } from './roles/roles.module';
 import { CursosModule } from './cursos/cursos.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { MateriasModule } from './materias/materias.module';
+import { AvisosModule } from './avisos/avisos.module';
+import { CiclosLectivosModule } from './ciclos-lectivos/ciclos-lectivos.module';
+import { CicloCursosModule } from './ciclo-cursos/ciclo-cursos.module';
+import { CicloMateriasModule } from './ciclo-materias/ciclo-materias.module';
+import { NotasModule } from './notas/notas.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -27,6 +33,12 @@ import { MateriasModule } from './materias/materias.module';
     CursosModule,
     UsuariosModule,
     MateriasModule,
+    AvisosModule,
+    CiclosLectivosModule,
+    CicloCursosModule,
+    CicloMateriasModule,
+    NotasModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
